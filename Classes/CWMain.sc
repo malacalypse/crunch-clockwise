@@ -162,11 +162,11 @@ ClockWise {
             callback);
     }
 
-    tempoClock { |tempoPt, clockPt, clock|
+    tempoClock { |tempoPt, clockPt, clock, startPlaying=true|
         CWTempoClock(
             this.point(tempoPt),
             this.point(clockPt),
-            clock);
+            clock, startPlaying);
     }
 
     midiClock { |pt, dev, inOnly=false, outOnly=false|
