@@ -116,6 +116,15 @@ ClockWise {
             ch, note, cc);
     }
 
+    midiToggleButton { |pt, dev, ch, note=nil, cc=nil, defaultEnabled=false, inOnly=false, outOnly=false |
+        CWToggleButton(
+            this.point(pt),
+            this.getMidiIn(dev, skip:outOnly),
+            this.getMidiOut(dev, skip:inOnly),
+            ch, note, cc,
+            defaultEnabled);
+    }
+
     midiTriggerButton { |pt, dev, ch, note=nil, cc=nil, inOnly=false, outOnly=false|
         CWTriggerButton(
             this.point(pt),
