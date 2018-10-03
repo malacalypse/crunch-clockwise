@@ -119,6 +119,7 @@ CWToggleButton : CWButtonBase {
     buttonOn {
         active = active.not;
         this.send(\set, if(active, 1, 0));
+        this.outputButton(active);
     }
     buttonOff {
         // Resend on so as to make sure the controller has the right state
